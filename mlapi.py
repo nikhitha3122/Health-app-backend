@@ -94,6 +94,7 @@ liver_model = pickle.load(open('./liver_model.sav', 'rb'))
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
+    allow_origins=["https://healthappn.netlify.app/"],
     allow_methods=["POST"],
     allow_headers=["*"],
 )
