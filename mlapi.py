@@ -91,11 +91,20 @@ cancer_model = pickle.load(open('./cancer_model.sav', 'rb'))
 liver_model = pickle.load(open('./liver_model.sav', 'rb'))
 
 
+origins = [
+    "http://localhost",
+    "http://localhost:8000",
+    "http://localhost:3000",
+    "http://localhost:8080",
+    "https://healthappn.netlify.app/"
+]
+
+# Add the CORS middleware to the FastAPI application
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_origins=["https://healthappn.netlify.app/"],
-    allow_methods=["POST"],
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
