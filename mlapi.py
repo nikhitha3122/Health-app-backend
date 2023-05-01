@@ -93,6 +93,7 @@ liver_model = pickle.load(open('./liver_model.sav', 'rb'))
 
 origins = [
     "https://healthappn.netlify.app",
+    "https://kidneyprediction.netlify.app",
 ]
 
 # Enable CORS
